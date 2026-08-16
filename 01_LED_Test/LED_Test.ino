@@ -1,11 +1,18 @@
+// External LED Test - ESP32
+
+int ledPin = 2;
+
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(115200);
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(ledPin, HIGH);
+  Serial.println("LED ON");
   delay(1000);
 
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(ledPin, LOW);
+  Serial.println("LED OFF");
   delay(1000);
 }
